@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Rreth projektit – Mikroklima</title>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">🧭</div>
+      <div>
+        <h1>Rreth projektit</h1>
+        <p id="period" class="muted"></p>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Harta</a>
+      <a href="charts.html">Grafikët</a>
+      <a class="active" href="about.html">Rreth projektit</a>
+    </nav>
+  </header>
+
+  <main class="about">
+    <div class="card">
+      <h2>Çfarë tregon kjo faqe?</h2>
+      <ul>
+        <p>Kjo faqe paraqet një analizë vizuale dhe interaktive të mikroklimës turistike të Shkodrës, e ndërtuar mbi të dhëna reale të mbledhura në terren.</p>
+
+        <p>Hartë interaktive me katër pika kryesore turistike të qytetit, ku vizitorët mund të shohin ndryshimet e kushteve klimatike sipas zonës dhe orarit.</p>
+
+        <p>Grafikë të gjeneruar nga të dhënat e Excel-it, që ilustrojnë qartë temperaturën, shpejtësinë e erës, intensitetin e rrezatimit diellor dhe indeksin e përgjithshëm të komfortit.</p>
+        <p>Rekomandime për orën më të mirë të vizitës për çdo zonë turistike, të bazuara në analizën e indeksit të komfortit termik.</p>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Si llogaritet Komforti total?</h2>
+      <ul><p>
+       Komforti total shprehet me një indeks orientues nga 0 deri në 100, i cili tregon sa të favorshme janë kushtet mikroklimatike për vizitë në një zonë të caktuar.</p>
+      <p>Ky indeks përllogaritet duke marrë mesataren e tre nën-treguesve kryesorë:</p>
+    <p>Temperatura e ajrit</p>
+  <p>
+Shpejtësia e erës</p>
+<p>
+Intensiteti i rrezatimit diellor</p>
+<p>
+Secili parametër vlerësohet në mënyrë të thjeshtuar dhe kontribuon në rezultatin përfundimtar të komfortit.</p></ul>
+
+
+    </div>
+
+  
+  </main>
+
+  <script>
+  (function(){
+    const d = window.MICROKLIMA_DATA;
+    if(!d || !d.meta) return;
+    const el = document.getElementById('period');
+    if(el) el.textContent = d.meta.period || '';
+  })();
+</script>
+</body>
+</html>
