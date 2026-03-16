@@ -26,41 +26,34 @@
     <div class="card">
       <h2>Çfarë tregon kjo faqe?</h2>
       <ul>
-        <p>Kjo faqe paraqet një analizë vizuale dhe interaktive të mikroklimës turistike të Shkodrës, e ndërtuar mbi të dhëna reale të mbledhura në terren.</p>
-
-        <p>Hartë interaktive me katër pika kryesore turistike të qytetit, ku vizitorët mund të shohin ndryshimet e kushteve klimatike sipas zonës dhe orarit.</p>
-
-        <p>Grafikë të gjeneruar nga të dhënat e Excel-it, që ilustrojnë qartë temperaturën, shpejtësinë e erës, intensitetin e rrezatimit diellor dhe indeksin e përgjithshëm të komfortit.</p>
-        <p>Rekomandime për orën më të mirë të vizitës për çdo zonë turistike, të bazuara në analizën e indeksit të komfortit termik.</p>
+        <li>Kjo faqe paraqet një analizë vizuale dhe interaktive të mikroklimës turistike të Shkodrës, e ndërtuar mbi të dhëna reale të mbledhura në terren.</li>
+        <li>Hartë interaktive me katër pika kryesore turistike të qytetit, ku vizitorët mund të shohin ndryshimet e kushteve klimatike sipas zonës dhe orarit.</li>
+        <li>Grafikë të gjeneruar nga të dhënat e Excel-it, që ilustrojnë qartë temperaturën, shpejtësinë e erës, intensitetin e rrezatimit diellor dhe indeksin e përgjithshëm të komfortit.</li>
+        <li>Rekomandime për orën më të mirë të vizitës për çdo zonë turistike, të bazuara në analizën e indeksit të komfortit termik.</li>
       </ul>
     </div>
 
     <div class="card">
       <h2>Si llogaritet Komforti total?</h2>
-      <ul><p>
-       Komforti total shprehet me një indeks orientues nga 0 deri në 100, i cili tregon sa të favorshme janë kushtet mikroklimatike për vizitë në një zonë të caktuar.</p>
-      <p>Ky indeks përllogaritet duke marrë mesataren e tre nën-treguesve kryesorë:</p>
-    <p>Temperatura e ajrit</p>
-  <p>
-Shpejtësia e erës</p>
-<p>
-Intensiteti i rrezatimit diellor</p>
-<p>
-Secili parametër vlerësohet në mënyrë të thjeshtuar dhe kontribuon në rezultatin përfundimtar të komfortit.</p></ul>
-
-
+      <ul>
+        <li>Komforti total shprehet me një indeks orientues nga 0 deri në 100, i cili tregon sa të favorshme janë kushtet mikroklimatike për vizitë në një zonë të caktuar.</li>
+        <li>Ky indeks përllogaritet duke marrë mesataren e tre nën-treguesve kryesorë.</li>
+        <li>Temperatura e ajrit</li>
+        <li>Shpejtësia e erës</li>
+        <li>Intensiteti i rrezatimit diellor</li>
+        <li>Secili parametër vlerësohet në mënyrë të thjeshtuar dhe kontribuon në rezultatin përfundimtar të komfortit.</li>
+      </ul>
     </div>
-
-  
   </main>
 
+  <script src="data.js"></script>
   <script>
-  (function(){
-    const d = window.MICROKLIMA_DATA;
-    if(!d || !d.meta) return;
-    const el = document.getElementById('period');
-    if(el) el.textContent = d.meta.period || '';
-  })();
-</script>
+    (function () {
+      const d = window.MICROKLIMA_DATA;
+      if (!d || !d.meta) return;
+      const el = document.getElementById('period');
+      if (el) el.textContent = d.meta.period || '';
+    })();
+  </script>
 </body>
 </html>
